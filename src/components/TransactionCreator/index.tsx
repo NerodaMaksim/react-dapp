@@ -62,7 +62,9 @@ export const TransactionCreator = () => {
                                     <RB.InputGroup.Text id="basic-addon2">ETH</RB.InputGroup.Text>
                                 </RB.InputGroup.Append>
                             </RB.InputGroup>
+                            {account? (
                             <BalanceComponent handleChangeAmount={handleChangeAmount} account={account} />
+                            ): null}
                             <RB.Button
                                 onClick={handlePreapareTransaction}
                                 variant="primary"
