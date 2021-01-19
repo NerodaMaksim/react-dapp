@@ -28,7 +28,7 @@ export const MetaMaskButton = () => {
 
     React.useEffect(() => {
         if (activatingConnector &&
-            activatingConnector == connector &&
+            activatingConnector === connector &&
             account
             ){
                 window.console.log('[MetaMask] - successfully connected');

@@ -87,9 +87,11 @@ export const prepareTransaction = async (amountToSend, account, destinationAddre
  * @param {*} account 
  */
 export const getMyWalletBalance = async (account) => {
-    let myBalanceWei = await web3.eth.getBalance(account || web3.eth.defaultAccount);
-    let myBalance = await web3.utils.fromWei(myBalanceWei, 'ether');
+    if(account){        
+        let myBalanceWei = await web3.eth.getBalance(account);
+        let myBalance = await web3.utils.fromWei(myBalanceWei, 'ether');
 
-    window.console.log(`Your wallet balance is currently ${myBalance} ETH`)
-    return myBalance;
+        window.console.log(`Your wallet balance is currently ${myBalance} ETH`)
+        return myBalance;
+    }
 };
