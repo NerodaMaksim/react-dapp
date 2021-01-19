@@ -7,11 +7,12 @@ const axios = require('axios')
 const EthereumTx = require('ethereumjs-tx')
 const Web3 = require('web3')
 
+const INFURA_ACCESS_TOKEN = '0b77cb3d49d44606be5ccee02f1acb02';
 /**
  * Network configuration
  */
-const mainnet = `https://mainnet.infura.io/${process.env.REACT_APP_INFURA_ACCESS_TOKEN}`
-const testnet = `https://ropsten.infura.io/v3/${process.env.REACT_APP_INFURA_ACCESS_TOKEN}`
+const mainnet = `https://mainnet.infura.io/${INFURA_ACCESS_TOKEN}`
+const testnet = `https://ropsten.infura.io/v3/${INFURA_ACCESS_TOKEN}`
 
 /**
  * Change the provider that is passed to HttpProvider to `mainnet` for live transactions.
